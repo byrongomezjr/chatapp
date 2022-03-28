@@ -11,7 +11,7 @@ import HomeScreen from './screens/HomeScreen';
 const Stack = createNativeStackNavigator();
 
 const globalScreenOptions = {
-  headerStyle: {backgroundColor: 'lightblue'},
+  headerStyle: {backgroundColor: 'azure'},
   headerTitleStyle: {color: 'black'},
   headerTintColor: 'light',
 };

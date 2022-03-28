@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   },
   topInnerBackground: {
     flex: 1,
-    backgroundColor: 'lightblue',
+    backgroundColor: 'azure',
   },
   mainTopContainer: {
     flex: 3,
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: 20,
-    color: 'steelblue',
+    color: 'blue',
     fontSize: 18,
   },
   containerLogo: {
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   bottomInnerBackground: {
     flex: 1,
-    backgroundColor: 'lightblue',
+    backgroundColor: 'azure',
     borderTopLeftRadius: 80,
   },
   mainLowerContainer: {
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     width: 160,
     height: 45,
     backgroundColor: 'steelblue',
-    marginTop: 50,
+    marginTop: 30,
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
@@ -181,6 +181,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   signupText: {
-    color: 'black',
+    color: 'blue',
   },
 });

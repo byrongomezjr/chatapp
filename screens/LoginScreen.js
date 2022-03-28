@@ -38,6 +38,9 @@ const LoginScreen = ({navigation}) => {
       <View style={styles.topOuterBackground}>
         <View style={styles.topInnerBackground}>
           <View style={styles.mainTopContainer}>
+          <View style={styles.title}>
+            <Text style={styles.welcomeText}>Welcome...</Text>
+            </View>
             <View style={styles.containerLogo}>
               <Image
                 source={require('../assets/robotchatmain.png')}
@@ -110,7 +113,7 @@ const styles = StyleSheet.create({
   },
   topInnerBackground: {
     flex: 1,
-    backgroundColor: 'lightblue',
+    backgroundColor: 'azure',
   },
   mainTopContainer: {
     flex: 3,
@@ -119,17 +122,22 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderBottomRightRadius: 80,
   },
+  welcomeText: {
+    color: 'blue',
+    fontSize: 18,
+    
+  },
   containerLogo: {
     marginTop: 50,
     marginBottom: 10,
   },
   bottomOuterBackground: {
     flex: 1,
-    backgroundColor: 'lightblue',
+    backgroundColor: 'azure',
   },
   bottomInnerBackground: {
     flex: 1,
-    backgroundColor: 'lightblue',
+    backgroundColor: 'azure',
     borderTopLeftRadius: 80,
   },
   mainLowerContainer: {
@@ -164,6 +172,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   signupText: {
-    color: 'black',
+    color: 'blue',
   },
 });
