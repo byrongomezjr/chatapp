@@ -40,8 +40,8 @@ const LoginScreen = ({navigation}) => {
           <View style={styles.mainTopContainer}>
             <View style={styles.containerLogo}>
               <Image
-                source={require('../assets/encryptedapplicationlogo.png')}
-                style={{width: 240, height: 40}}
+                source={require('../assets/robotchatmain.png')}
+                style={{width: 50, height: 75}}
               />
             </View>
 

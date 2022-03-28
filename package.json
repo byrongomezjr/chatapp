@@ -1,5 +1,5 @@
 {
-  "name": "encryptedapplication",
+  "name": "chatapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.0",
     "@react-native-firebase/app": "^12.1.0",
     "@react-native-firebase/auth": "^12.1.0",
     "@react-native-firebase/firestore": "^12.1.0",

@@ -47,8 +47,8 @@ const SignupScreen = ({navigation}) => {
               <Text style={styles.title}>Create an Encrypted Chat account</Text>
 
               <Image
-                source={require('../assets/encryptedapplicationlogo.png')}
-                style={{width: 240, height: 40}}
+                source={require('../assets/robotchatmain.png')}
+                style={{width: 50, height: 75}}
               />
             </View>
 

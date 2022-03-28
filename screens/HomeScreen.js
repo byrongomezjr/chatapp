@@ -14,7 +14,7 @@ import {auth, db} from '../firebase';
 const HomeScreen = ({navigation}) => {
   useLayoutEffect(() => {
     navigation.setOptions({
-      title: 'Encrypted Chat',
+      title: 'Messages',
       headerStyle: {backgroundColor: '#fff'},
       headerTitleStyle: {color: 'black'},
       headerTintColor: 'black',
