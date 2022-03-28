@@ -12,10 +12,10 @@ const CustomListItem = (id, chatName, enterChat) => {
         }}
       />
       <ListItem.Content>
-        <ListItem.Title style={{fontWeight: '700'}}>My Chat</ListItem.Title>
+        <ListItem.Title style={{fontWeight: '700'}}>Byron Gomez</ListItem.Title>
         <ListItem.Subtitle numberOfLines={1} ellipsizeMode="tail">
           This is a test subtitle, this is a test subtitle, this is a test
-          subtitle
+          subtitle, this is a test subtitle
         </ListItem.Subtitle>
       </ListItem.Content>
     </ListItem>
