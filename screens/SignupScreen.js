@@ -15,7 +15,6 @@ const SignupScreen = ({navigation}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [imageUrl, setImageUrl] = useState('');
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -29,9 +28,6 @@ const SignupScreen = ({navigation}) => {
       .then(authUser => {
         authUser.user.updateProfile({
           displayName: name,
-          photoURL:
-            imageURL ||
-            'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
         });
       })
       .catch(error => alert(error.message));
@@ -39,12 +35,12 @@ const SignupScreen = ({navigation}) => {
 
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <View style={styles.topOuterBackground}>
         <View style={styles.topInnerBackground}>
           <View style={styles.mainTopContainer}>
             <View style={styles.containerLogo}>
-              <Text style={styles.title}>Create an Encrypted Chat account</Text>
+              <Text style={styles.title}>Create an account...</Text>
 
               <Image
                 source={require('../assets/robotchatmain.png')}
@@ -54,9 +50,9 @@ const SignupScreen = ({navigation}) => {
 
             <TextInput
               placeholder="Full Name"
-              selectionColor={'crimson'}
+              selectionColor={'grey'}
               borderBottomWidth={1}
-              borderBottomColor={'steelblue'}
+              borderBottomColor={'lightblue'}
               style={styles.textInput}
               autoFocus
               type="text"
@@ -65,9 +61,9 @@ const SignupScreen = ({navigation}) => {
             />
             <TextInput
               placeholder="Email"
-              selectionColor={'crimson'}
+              selectionColor={'grey'}
               borderBottomWidth={1}
-              borderBottomColor={'steelblue'}
+              borderBottomColor={'lightblue'}
               style={styles.textInput}
               type="email"
               value={email}
@@ -75,25 +71,14 @@ const SignupScreen = ({navigation}) => {
             />
             <TextInput
               placeholder="Create a Password"
-              selectionColor={'crimson'}
+              selectionColor={'grey'}
               borderBottomWidth={1}
-              borderBottomColor={'steelblue'}
+              borderBottomColor={'lightblue'}
               style={styles.textInput}
               secureTextEntry
               type="password"
               value={password}
               onChangeText={text => setPassword(text)}
-            />
-            <TextInput
-              placeholder="Icon Image URl (Optional)"
-              selectionColor={'crimson'}
-              borderBottomWidth={1}
-              borderBottomColor={'steelblue'}
-              style={styles.textInput}
-              type="text"
-              value={imageUrl}
-              onChangeText={text => setImageUrl(text)}
-              onSubmitEditing={register}
             />
 
             <TouchableOpacity style={styles.loginButton} onPress={register}>
@@ -113,7 +98,7 @@ const SignupScreen = ({navigation}) => {
                   onPress={() => navigation.navigate('Sign In')}>
                   Sign In
                 </Text>
-                <View style={{height: 100}} />
+                <View/>
               </View>
             </View>
           </View>
@@ -132,11 +117,11 @@ const styles = StyleSheet.create({
   },
   topOuterBackground: {
     flex: 1,
-    backgroundColor: 'crimson',
+    backgroundColor: 'white',
   },
   topInnerBackground: {
     flex: 1,
-    backgroundColor: 'crimson',
+    backgroundColor: 'lightblue',
   },
   mainTopContainer: {
     flex: 3,
@@ -146,12 +131,12 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 80,
   },
   title: {
-    marginBottom: 40,
+    marginBottom: 20,
     color: 'steelblue',
     fontSize: 18,
   },
   containerLogo: {
-    marginTop: 160,
+    marginTop: 120,
     marginBottom: 10,
     alignItems: 'center',
   },
@@ -161,7 +146,7 @@ const styles = StyleSheet.create({
   },
   bottomInnerBackground: {
     flex: 1,
-    backgroundColor: 'crimson',
+    backgroundColor: 'lightblue',
     borderTopLeftRadius: 80,
   },
   mainLowerContainer: {
@@ -171,30 +156,31 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 40,
-    width: 340,
+    width: 300,
     paddingLeft: 5,
   },
   loginButton: {
     alignItems: 'center',
-    width: 140,
-    height: 40,
-    backgroundColor: 'crimson',
-    marginTop: 100,
-    padding: 10,
+    width: 160,
+    height: 45,
+    backgroundColor: 'steelblue',
+    marginTop: 50,
     borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   loginText: {
     color: 'white',
   },
   forgotPassword: {
-    marginTop: 25,
+    marginTop: 50,
   },
   accountText: {
-    color: 'white',
-    marginTop: 20,
-    marginBottom: 10,
+    color: 'black',
+    margin: 20,
+    marginBottom: 5,
   },
   signupText: {
-    color: 'white',
+    color: 'black',
   },
 });

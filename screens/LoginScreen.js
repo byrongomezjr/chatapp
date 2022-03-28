@@ -34,7 +34,7 @@ const LoginScreen = ({navigation}) => {
 
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <View style={styles.topOuterBackground}>
         <View style={styles.topInnerBackground}>
           <View style={styles.mainTopContainer}>
@@ -48,9 +48,9 @@ const LoginScreen = ({navigation}) => {
             <TextInput
               placeholder="Enter Your Email"
               type="email"
-              selectionColor={'crimson'}
+              selectionColor={'grey'}
               borderBottomWidth={1}
-              borderBottomColor={'salmon'}
+              borderBottomColor={'lightblue'}
               style={styles.textInput}
               autoFocus
               type="email"
@@ -59,9 +59,9 @@ const LoginScreen = ({navigation}) => {
             />
             <TextInput
               placeholder="Enter Your Password"
-              selectionColor={'crimson'}
+              selectionColor={'grey'}
               borderBottomWidth={1}
-              borderBottomColor={'salmon'}
+              borderBottomColor={'lightblue'}
               style={styles.textInput}
               secureTextEntry
               type="password"
@@ -71,7 +71,7 @@ const LoginScreen = ({navigation}) => {
             />
 
             <TouchableOpacity style={styles.loginButton} onPress={signIn}>
-              <Text style={styles.loginText}>Log In</Text>
+              <Text style={styles.loginText}>Sign In</Text>
             </TouchableOpacity>
 
             <Text style={styles.forgotPassword}>Forgot password?</Text>
@@ -106,11 +106,11 @@ const styles = StyleSheet.create({
   },
   topOuterBackground: {
     flex: 1,
-    backgroundColor: 'crimson',
+    backgroundColor: 'white',
   },
   topInnerBackground: {
     flex: 1,
-    backgroundColor: 'crimson',
+    backgroundColor: 'lightblue',
   },
   mainTopContainer: {
     flex: 3,
@@ -120,15 +120,16 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 80,
   },
   containerLogo: {
-    marginTop: 160,
+    marginTop: 50,
+    marginBottom: 10,
   },
   bottomOuterBackground: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'lightblue',
   },
   bottomInnerBackground: {
     flex: 1,
-    backgroundColor: 'crimson',
+    backgroundColor: 'lightblue',
     borderTopLeftRadius: 80,
   },
   mainLowerContainer: {
@@ -138,30 +139,31 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 40,
-    width: 340,
-    paddingLeft: 5,
+    width: 300,
+    paddingLeft: 2,
   },
   loginButton: {
     alignItems: 'center',
-    width: 140,
-    height: 40,
-    backgroundColor: 'crimson',
-    marginTop: 100,
-    padding: 10,
+    width: 160,
+    height: 45,
+    backgroundColor: 'steelblue',
+    marginTop: 50,
     borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   loginText: {
     color: 'white',
   },
   forgotPassword: {
-    marginTop: 25,
+    margin: 20,
   },
   accountText: {
-    color: 'white',
-    marginTop: 20,
+    color: 'black',
+    marginTop: 100,
     marginBottom: 10,
   },
   signupText: {
-    color: 'white',
+    color: 'black',
   },
 });
