@@ -12,19 +12,26 @@ import CustomListItem from '../components/CustomListItem';
 import {auth, db} from '../firebase';
 
 const HomeScreen = ({navigation}) => {
+
+  const signOutUser = () => {
+    auth.signOut().then(() => {
+      navigation.replace('Sign In');
+    })
+  };
+
   useLayoutEffect(() => {
     navigation.setOptions({
-      title: 'Messages',
-      headerStyle: {backgroundColor: '#fff'},
-      headerTitleStyle: {color: 'black'},
+      title: 'My List',
+      headerStyle: {backgroundColor: 'white'},
+      headerTitleStyle: {color: 'midnightblue'},
       headerTintColor: 'black',
-      headerLeft: () => (
-        <View style={{marginLeft: 20}}>
-          <TouchableOpacity>
+      headerRight: () => (
+        <View style={{marginRight: 10}}>
+          <TouchableOpacity onPress={signOutUser} activeOpacity={0.5}>
             <Avatar
               rounded
               source={{
-                uri: auth?.currentUser?.photoURL,
+                uri: 'https://cdn-icons-png.flaticon.com/512/1828/1828404.png',
               }}
             />
           </TouchableOpacity>

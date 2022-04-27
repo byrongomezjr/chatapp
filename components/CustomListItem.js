@@ -11,6 +11,7 @@ const CustomListItem = (id, chatName, enterChat) => {
           uri: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
         }}
       />
+
       <ListItem.Content>
         <ListItem.Title style={{fontWeight: '700'}}>Byron Gomez</ListItem.Title>
         <ListItem.Subtitle numberOfLines={1} ellipsizeMode="tail">
@@ -25,3 +26,7 @@ const CustomListItem = (id, chatName, enterChat) => {
 export default CustomListItem;
 
 const styles = StyleSheet.create({});
+
+
+//numberOfLines equal to one so that our list item cannot go over to the next line,
+//ellipsizeMode to tail for three small dots, continuation

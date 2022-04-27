@@ -40,7 +40,8 @@ const SignupScreen = ({navigation}) => {
         <View style={styles.topInnerBackground}>
           <View style={styles.mainTopContainer}>
             <View style={styles.containerLogo}>
-              <Text style={styles.title}>Create an account...</Text>
+              <Text style={styles.title}>Hello There,</Text>
+              <Text style={styles.personalAssistant}>I am your personal RoboAssistant!</Text>
 
               <Image
                 source={require('../assets/robotchatmain.png')}
@@ -134,9 +135,12 @@ const styles = StyleSheet.create({
   },
   //INSIDE COMPONENT
   title: {
-    marginBottom: 20,
+    marginTop: 10,
     color: 'midnightblue',
     fontSize: 18,
+  },
+  personalAssistant: {
+    marginBottom: 20
   },
   containerLogo: {
     marginTop: 120,

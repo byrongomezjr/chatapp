@@ -11,7 +11,6 @@ import {StatusBar} from 'expo-status-bar';
 import {Button, Input, Text} from 'react-native-elements';
 import {auth} from '../firebase';
 
-
 //email and password user input
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -34,14 +33,16 @@ const LoginScreen = ({navigation}) => {
       .catch(error => alert(error));
   };
 
+
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <StatusBar style="dark" />
       <View style={styles.topOuterBackground}>
         <View style={styles.topInnerBackground}>
           <View style={styles.mainTopContainer}>
-          <View style={styles.title}>
-            <Text style={styles.welcomeText}>Welcome...</Text>
+            <View style={styles.title}>
+              <Text style={styles.welcomeText}>Welcome back human!</Text>
+              <Text style={styles.pleaseText}>Please sign in...</Text>
             </View>
             <View style={styles.containerLogo}>
               <Image
@@ -51,8 +52,8 @@ const LoginScreen = ({navigation}) => {
             </View>
 
             <TextInput
-              placeholder="Enter Your Email"
-              placeholderTextColor = 'dimgrey'
+              placeholder="Email Address"
+              placeholderTextColor="dimgrey"
               type="email"
               selectionColor={'midnightblue'}
               borderBottomWidth={0}
@@ -64,8 +65,8 @@ const LoginScreen = ({navigation}) => {
               onChangeText={text => setEmail(text)}
             />
             <TextInput
-              placeholder="Enter Your Password"
-              placeholderTextColor = 'dimgrey'
+              placeholder="Your Password"
+              placeholderTextColor="dimgrey"
               selectionColor={'midnightblue'}
               borderBottomWidth={0}
               borderBottomColor={'dimgrey'}
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
-  //BOTTOM DARK BLUE COLOR
+  //MAIN CONTAINERS
   topOuterBackground: {
     flex: 1,
     backgroundColor: 'white',
@@ -127,21 +128,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderBottomRightRadius: 80,
   },
-  welcomeText: {
-    color: 'midnightblue',
-    fontSize: 18,
-    marginTop: 60
-    
-  },
-  containerLogo: {
-    marginTop: 50,
-    marginBottom: 10,
-  },
   bottomOuterBackground: {
     flex: 1,
     backgroundColor: 'white',
   },
-  //BOTTOM DARK BLUE COLOR
   bottomInnerBackground: {
     flex: 1,
     backgroundColor: 'olive',
@@ -151,6 +141,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  //TEXT AND LOGO ELEMENTS
+  welcomeText: {
+    color: 'midnightblue',
+    fontSize: 18,
+    marginTop: 60,
+  },
+  pleaseText: {
+    marginLeft: 15
+  },
+  containerLogo: {
+    marginTop: 50,
+    marginBottom: 10,
   },
   textInput: {
     height: 40,
@@ -172,8 +175,9 @@ const styles = StyleSheet.create({
   },
   forgotPassword: {
     margin: 20,
-    color: 'midnightblue'
+    color: 'midnightblue',
   },
+  //BOTTOM TEXT ELEMENTS
   accountText: {
     color: 'palegoldenrod',
     margin: 120,
@@ -183,6 +187,5 @@ const styles = StyleSheet.create({
     color: 'moccasin',
   },
 });
-
 
 //ui main colors midnightblue and palegoldenrod
