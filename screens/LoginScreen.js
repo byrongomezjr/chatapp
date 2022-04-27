@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
   welcomeText: {
     color: 'midnightblue',
     fontSize: 18,
+    marginTop: 60
     
   },
   containerLogo: {
@@ -175,7 +176,7 @@ const styles = StyleSheet.create({
   },
   accountText: {
     color: 'palegoldenrod',
-    marginTop: 100,
+    margin: 120,
     marginBottom: 10,
   },
   signupText: {

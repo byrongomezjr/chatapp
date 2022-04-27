@@ -88,7 +88,6 @@ const SignupScreen = ({navigation}) => {
               <Text style={styles.loginText}>Sign Up</Text>
             </TouchableOpacity>
 
-            <Text style={styles.forgotPassword}>Forgot password?</Text>
             <View style={{height: 100}} />
           </View>
 
@@ -169,7 +168,7 @@ const styles = StyleSheet.create({
     width: 160,
     height: 45,
     backgroundColor: 'palegoldenrod',
-    marginTop: 30,
+    margin: 20,
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
