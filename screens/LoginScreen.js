@@ -11,6 +11,8 @@ import {StatusBar} from 'expo-status-bar';
 import {Button, Input, Text} from 'react-native-elements';
 import {auth} from '../firebase';
 
+
+//email and password user input
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -50,10 +52,11 @@ const LoginScreen = ({navigation}) => {
 
             <TextInput
               placeholder="Enter Your Email"
+              placeholderTextColor = 'dimgrey'
               type="email"
-              selectionColor={'grey'}
-              borderBottomWidth={1}
-              borderBottomColor={'lightblue'}
+              selectionColor={'midnightblue'}
+              borderBottomWidth={0}
+              borderBottomColor={'dimgrey'}
               style={styles.textInput}
               autoFocus
               type="email"
@@ -62,9 +65,10 @@ const LoginScreen = ({navigation}) => {
             />
             <TextInput
               placeholder="Enter Your Password"
-              selectionColor={'grey'}
-              borderBottomWidth={1}
-              borderBottomColor={'lightblue'}
+              placeholderTextColor = 'dimgrey'
+              selectionColor={'midnightblue'}
+              borderBottomWidth={0}
+              borderBottomColor={'dimgrey'}
               style={styles.textInput}
               secureTextEntry
               type="password"
@@ -107,13 +111,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
+  //BOTTOM DARK BLUE COLOR
   topOuterBackground: {
     flex: 1,
     backgroundColor: 'white',
   },
   topInnerBackground: {
     flex: 1,
-    backgroundColor: 'azure',
+    backgroundColor: 'olive',
   },
   mainTopContainer: {
     flex: 3,
@@ -123,7 +128,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 80,
   },
   welcomeText: {
-    color: 'blue',
+    color: 'midnightblue',
     fontSize: 18,
     
   },
@@ -133,11 +138,12 @@ const styles = StyleSheet.create({
   },
   bottomOuterBackground: {
     flex: 1,
-    backgroundColor: 'azure',
+    backgroundColor: 'white',
   },
+  //BOTTOM DARK BLUE COLOR
   bottomInnerBackground: {
     flex: 1,
-    backgroundColor: 'azure',
+    backgroundColor: 'olive',
     borderTopLeftRadius: 80,
   },
   mainLowerContainer: {
@@ -154,24 +160,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: 160,
     height: 45,
-    backgroundColor: 'steelblue',
+    backgroundColor: 'palegoldenrod',
     marginTop: 50,
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
   },
   loginText: {
-    color: 'white',
+    color: 'midnightblue',
   },
   forgotPassword: {
     margin: 20,
+    color: 'midnightblue'
   },
   accountText: {
-    color: 'black',
+    color: 'palegoldenrod',
     marginTop: 100,
     marginBottom: 10,
   },
   signupText: {
-    color: 'blue',
+    color: 'moccasin',
   },
 });
+
+
+//ui main colors midnightblue and palegoldenrod

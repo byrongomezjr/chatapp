@@ -50,9 +50,10 @@ const SignupScreen = ({navigation}) => {
 
             <TextInput
               placeholder="Full Name"
-              selectionColor={'grey'}
-              borderBottomWidth={1}
-              borderBottomColor={'lightblue'}
+              placeholderTextColor = 'dimgrey'
+              selectionColor={'dimgrey'}
+              borderBottomWidth={0}
+              borderBottomColor={'dimgrey'}
               style={styles.textInput}
               autoFocus
               type="text"
@@ -61,9 +62,10 @@ const SignupScreen = ({navigation}) => {
             />
             <TextInput
               placeholder="Email"
-              selectionColor={'grey'}
-              borderBottomWidth={1}
-              borderBottomColor={'lightblue'}
+              placeholderTextColor = 'dimgrey'
+              selectionColor={'dimgrey'}
+              borderBottomWidth={0}
+              borderBottomColor={'dimgrey'}
               style={styles.textInput}
               type="email"
               value={email}
@@ -71,8 +73,9 @@ const SignupScreen = ({navigation}) => {
             />
             <TextInput
               placeholder="Create a Password"
+              placeholderTextColor = 'dimgrey'
               selectionColor={'grey'}
-              borderBottomWidth={1}
+              borderBottomWidth={0}
               borderBottomColor={'lightblue'}
               style={styles.textInput}
               secureTextEntry
@@ -121,7 +124,7 @@ const styles = StyleSheet.create({
   },
   topInnerBackground: {
     flex: 1,
-    backgroundColor: 'azure',
+    backgroundColor: 'olive',
   },
   mainTopContainer: {
     flex: 3,
@@ -130,9 +133,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderBottomRightRadius: 80,
   },
+  //INSIDE COMPONENT
   title: {
     marginBottom: 20,
-    color: 'blue',
+    color: 'midnightblue',
     fontSize: 18,
   },
   containerLogo: {
@@ -146,7 +150,7 @@ const styles = StyleSheet.create({
   },
   bottomInnerBackground: {
     flex: 1,
-    backgroundColor: 'azure',
+    backgroundColor: 'olive',
     borderTopLeftRadius: 80,
   },
   mainLowerContainer: {
@@ -159,28 +163,31 @@ const styles = StyleSheet.create({
     width: 300,
     paddingLeft: 5,
   },
+  //LOGIN SECTION
   loginButton: {
     alignItems: 'center',
     width: 160,
     height: 45,
-    backgroundColor: 'steelblue',
+    backgroundColor: 'palegoldenrod',
     marginTop: 30,
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
   },
   loginText: {
-    color: 'white',
+    color: 'midnightblue',
   },
+  //FORGOT PASSWORD
   forgotPassword: {
     marginTop: 50,
+    color: 'midnightblue'
   },
   accountText: {
-    color: 'black',
+    color: 'palegoldenrod',
     margin: 20,
     marginBottom: 5,
   },
   signupText: {
-    color: 'blue',
+    color: 'moccasin',
   },
 });
