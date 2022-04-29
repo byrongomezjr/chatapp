@@ -180,11 +180,7 @@ const styles = StyleSheet.create({
   loginText: {
     color: 'midnightblue',
   },
-  //FORGOT PASSWORD
-  forgotPassword: {
-    marginTop: 50,
-    color: 'midnightblue'
-  },
+  //BOTTOM TEXT
   accountText: {
     color: 'palegoldenrod',
     margin: 20,

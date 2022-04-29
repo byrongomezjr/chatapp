@@ -1,7 +1,13 @@
 {
     "cSpell.words": [
+        "darkolivegreen",
+        "darksalmon",
+        "evilicon",
         "lightcoral",
         "midnightblue",
         "sandybrown"
+    ],
+    "cSpell.ignoreWords": [
+        "darkseagreen"
     ]
 }

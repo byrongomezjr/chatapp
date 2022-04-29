@@ -8,7 +8,8 @@ import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import HomeScreen from './screens/HomeScreen';
 
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {YellowBox} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ const defaultNavigationOptions = {
   headerTitleStyle: {color: 'midnightblue'},
   headerTintColor: 'light',
 };
+
 
 export default function App() {
   return (

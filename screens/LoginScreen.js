@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   welcomeText: {
     color: 'midnightblue',
     fontSize: 18,
-    marginTop: 60,
+    marginTop: 100,
   },
   pleaseText: {
     marginLeft: 15
@@ -180,8 +180,8 @@ const styles = StyleSheet.create({
   //BOTTOM TEXT ELEMENTS
   accountText: {
     color: 'palegoldenrod',
-    margin: 120,
-    marginBottom: 10,
+    margin: 20,
+    marginBottom: 5,
   },
   signupText: {
     color: 'moccasin',
