@@ -133,12 +133,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   bottomInnerBackground: {
-    flex: 1,
+    flex: 3,
     backgroundColor: 'olive',
     borderTopLeftRadius: 80,
   },
   mainLowerContainer: {
-    flex: 1,
+    flex: 3,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
   //BOTTOM TEXT ELEMENTS
   accountText: {
     color: 'palegoldenrod',
-    margin: 20,
+    marginTop: 100,
     marginBottom: 5,
   },
   signupText: {

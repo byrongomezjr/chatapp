@@ -58,7 +58,8 @@ const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView>
     <View>
-    <Text style={styles.heading}>TODO LIST</Text>
+    <Text style={styles.heading}>Today's Tasks</Text>
+    
       <ScrollView style={styles.scrollView}>
       {
         tasks.map((task, index) => {

@@ -97,7 +97,7 @@ const SignupScreen = ({navigation}) => {
               <View style={styles.mainLowerContainer}>
                 <Text style={styles.accountText}>Already have an account?</Text>
                 <Text
-                  style={styles.signupText}
+                  style={styles.signInText}
                   onPress={() => navigation.navigate('Sign In')}>
                   Sign In
                 </Text>
@@ -183,10 +183,9 @@ const styles = StyleSheet.create({
   //BOTTOM TEXT
   accountText: {
     color: 'palegoldenrod',
-    margin: 20,
     marginBottom: 5,
   },
-  signupText: {
+  signInText: {
     color: 'moccasin',
   },
 });

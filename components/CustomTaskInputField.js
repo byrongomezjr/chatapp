@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
-import { KeyboardAvoidingView, StyleSheet, View, TextInput, TouchableOpacity, } from "react-native";
+import { KeyboardAvoidingView, StyleSheet, View, TextInput, TouchableOpacity, Keyboard} from "react-native";
 
 import {Avatar} from 'react-native-elements';
 
 export default CustomTaskInputField = (props) => {
     const [task, setTask] = useState();
+    const [taskItems, setTaskItems] =useState([]);
 
     const handleAddTask = (value) => {
+        Keyboard.dismiss();
         props.addTask(value);
+        setTaskItems([...taskItems, task])
         setTask(null);
     }
 
@@ -15,12 +18,14 @@ export default CustomTaskInputField = (props) => {
         <KeyboardAvoidingView 
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.container}>
+
         <TextInput 
         style={styles.inputField} 
         value={task} 
         onChangeText={text => setTask(text)} 
         placeholder={'Write a task!'} 
-        placeholderTextColor={'white'}/>
+        placeholderTextColor={'white'} value={task} onChangeText={text => setTask(text)}/>
+
         <TouchableOpacity onPress={() => handleAddTask(task)}>
           <View style={styles.button}>
           <Avatar 
