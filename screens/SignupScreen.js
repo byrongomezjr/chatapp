@@ -183,6 +183,7 @@ const styles = StyleSheet.create({
   //BOTTOM TEXT
   accountText: {
     color: 'palegoldenrod',
+    marginTop: 50,
     marginBottom: 5,
   },
   signInText: {

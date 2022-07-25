@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
   //BOTTOM TEXT ELEMENTS
   accountText: {
     color: 'palegoldenrod',
-    marginTop: 100,
+    marginTop: 110,
     marginBottom: 5,
   },
   signupText: {

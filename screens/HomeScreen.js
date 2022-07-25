@@ -6,7 +6,8 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
-  Keyboard
+  Keyboard,
+  KeyboardAvoidingView
 } from 'react-native';
 import {Avatar} from 'react-native-elements';
 import CustomListItem from '../components/CustomListItem';
@@ -31,12 +32,7 @@ const HomeScreen = ({navigation}) => {
       headerRight: () => (
         <View style={{marginRight: 10}}>
           <TouchableOpacity onPress={signOutUser} activeOpacity={0.5}>
-            <Avatar
-              rounded
-              source={{
-                uri: 'https://w7.pngwing.com/pngs/351/13/png-transparent-computer-icons-encapsulated-postscript-logo-logout-logo-sign-black-and-white-thumbnail.png',
-              }}
-            />
+          <Text style={styles.signOutText}>Sign Out</Text>
           </TouchableOpacity>
         </View>
       ),
@@ -56,45 +52,49 @@ const HomeScreen = ({navigation}) => {
   }
 
   return (
-    <SafeAreaView>
-    <View>
-    <Text style={styles.heading}>Today's Tasks</Text>
-    
-      <ScrollView style={styles.scrollView}>
+    <View style={styles.container}>
+    <Text style={styles.sectionTitle}>Today's Tasks</Text>
+     <View style={styles.tasksWrapper}>
+     <ScrollView>
       {
         tasks.map((task, index) => {
           return (
-            <View key={index} style={styles.taskContainer}>
+            <View key={index} style={styles.items}>
               <CustomListItem index={index + 1} task={task} deleteTask={() => deleteTask(index)}/>
             </View>
           );
         })
       }
       </ScrollView>
-      <CustomTaskInputField addTask={addTask}/>
+     </View>
+     <CustomTaskInputField addTask={addTask}/>
     </View>
-    </SafeAreaView>
+    
   );
 };
 
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  signOutText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
   container: {
     flex: 1,
+    backgroundColor: 'white',
   },
-  heading: {
-    color: 'black',
-    fontSize: 20,
-    fontWeight: '700',
+  tasksWrapper: {
+    flex: 2,
+    backgroundColor: 'white',
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 10,
+    marginHorizontal: 30,
+  },
+  items: {
     marginTop: 20,
-    marginBottom: 10,
-    marginLeft: 20,
-  },
-  scrollView: {
-    marginBottom: 200,
-  },
-  taskContainer: {
-    marginTop: 15,
   }
 });

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { KeyboardAvoidingView, StyleSheet, View, TextInput, TouchableOpacity, Keyboard} from "react-native";
+import { KeyboardAvoidingView, StyleSheet, View, TextInput, TouchableOpacity, Keyboard, ScrollView} from "react-native";
 
 import {Avatar} from 'react-native-elements';
 
@@ -8,26 +8,27 @@ export default CustomTaskInputField = (props) => {
     const [taskItems, setTaskItems] =useState([]);
 
     const handleAddTask = (value) => {
-        Keyboard.dismiss();
         props.addTask(value);
         setTaskItems([...taskItems, task])
         setTask(null);
     }
 
     return (
-        <KeyboardAvoidingView 
+        {/* Write a task. */},
+        <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={styles.container}>
+        keyboardVerticalOffset={70}
+        style={styles.WriteTaskWrapper}>
 
         <TextInput 
-        style={styles.inputField} 
+        style={styles.input} 
         value={task} 
         onChangeText={text => setTask(text)} 
         placeholder={'Write a task!'} 
-        placeholderTextColor={'white'} value={task} onChangeText={text => setTask(text)}/>
+        placeholderTextColor={'black'} value={task} onChangeText={text => setTask(text)}/>
 
         <TouchableOpacity onPress={() => handleAddTask(task)}>
-          <View style={styles.button}>
+          <View style={styles.addWrapper}>
           <Avatar 
           rounded
           source={{uri: 'https://w7.pngwing.com/pngs/972/334/png-transparent-computer-icons-add-logo-desktop-wallpaper-add-thumbnail.png'}}
@@ -39,31 +40,31 @@ export default CustomTaskInputField = (props) => {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        borderColor: 'white',
-        backgroundColor: 'darkolivegreen',
-        borderWidth: 1,
-        marginHorizontal: 20,
-        borderRadius: 20,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingHorizontal: 20,
-        position: 'absolute',
-        bottom: 120,
-    },
-    inputField: {
-        color: 'white',
-        height: 50,
+    WriteTaskWrapper: {
         flex: 1,
-    },
-    button: {
-        height: 30,
-        width:35,
-        borderRadius: 5,
-        marginHorizontal: -10,
-        backgroundColor: 'darkolivegreen',
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        justifyContent: 'center'
+        paddingHorizontal: 40,
+        backgroundColor: 'white',
+        paddingTop: 10,
     },
+    input: {
+        paddingVertical: 15,
+        paddingHorizontal: 20,
+        backgroundColor: 'white',
+        borderRadius: 80,
+        borderColor: 'black',
+        borderWidth: 1,
+        width: 280,
+        marginBottom: 30,
+    },
+    addWrapper: {
+        width: 20,
+        height: 63,
+        marginHorizontal: 10,
+    }
 });
