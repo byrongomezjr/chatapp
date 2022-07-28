@@ -1,14 +1,13 @@
 {
-    "cSpell.words": [
-        "darkgray",
-        "darkolivegreen",
-        "darksalmon",
-        "evilicon",
-        "lightcoral",
-        "midnightblue",
-        "sandybrown"
-    ],
-    "cSpell.ignoreWords": [
-        "darkseagreen"
-    ]
+  "cSpell.words": [
+    "darkgray",
+    "darkolivegreen",
+    "darksalmon",
+    "evilicon",
+    "lightcoral",
+    "midnightblue",
+    "sandybrown"
+  ],
+  "cSpell.ignoreWords": ["darkseagreen"],
+  "java.configuration.updateBuildConfiguration": "interactive"
 }
